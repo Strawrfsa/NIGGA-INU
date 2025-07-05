@@ -54,9 +54,23 @@
         .main-nav a { color: var(--secondary-text-color); text-decoration: none; font-weight: 600; transition: color 0.3s ease, text-shadow 0.3s ease; padding: 5px 10px; }
         .main-nav a:hover { color: var(--accent-color); text-shadow: 0 0 15px var(--accent-color); }
         .x-button {
-            display: inline-block; background: #000; color: #fff; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-weight: 700; transition: background 0.3s ease, transform 0.3s ease;
+            display: inline-flex; /* Changed to inline-flex for icon alignment */
+            align-items: center; /* Center content vertically */
+            gap: 5px; /* Space between icon and text */
+            background: #000; 
+            color: #fff; 
+            padding: 8px 15px; 
+            border-radius: 20px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            transition: background 0.3s ease, transform 0.3s ease;
             border: 2px solid var(--accent-color); 
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+        }
+        .x-button svg {
+            width: 18px; /* Size of the X icon */
+            height: 18px;
+            fill: currentColor; /* Inherit color from parent */
         }
         .x-button:hover {
             background: #333;
@@ -170,7 +184,10 @@
                     <li><a href="#tokenomics">Loot Distribution</a></li>
                     <li><a href="#roadmap">The Master Plan</a></li>
                 </ul>
-                <a href="https://x.com/i/communities/1941551807542497428" target="_blank" class="x-button">X Hideout</a>
+                <a href="https://x.com/i/communities/1941551807542497428" target="_blank" class="x-button">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="r-1nao33p r-4qtqp9 r-yyyyoo r-lwhw9o r-dnmrzs r-bnwqim r-1plcrui r-lrvibr" style="fill: currentColor;"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.75 11.392H20.06L14.956 9.771 21.6 2.25h-2.28zm-2.457 16.16l-4.794-6.242-3.308-4.3H2.25l7.228 8.26-8.75 11.392h2.808l5.106-6.66l3.308 4.3h8.26l-7.227-8.26z"></path></g></svg>
+                    X Hideout
+                </a>
             </nav>
         </div>
     </header>
